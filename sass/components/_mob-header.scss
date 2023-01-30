@@ -1,0 +1,119 @@
+.mob-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $white-color;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+}
+
+.mob-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+ padding:10px 15px 48px 40px   
+}
+
+.menu-btn{
+    display: block;
+    background-color: $white-color;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+}
+
+.menu-close-icon{
+    transition: $transition-fill;
+    &:hover,
+    &:focus{
+        fill: $primary-color;
+    }
+}
+
+
+.mob-nav-list__item:not(:last-child){
+    margin-bottom: 32px;
+}
+
+
+.mob-nav-list__link {
+display: block;
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 1.17;
+letter-spacing: 0.02em;
+transition: $transition-color;
+
+color: $color-text;
+ &:hover,
+ &:focus{
+    color: $primary-color;
+ }
+
+}
+.mob-contact-list__item{
+    margin-bottom: 32px;
+}
+.mob-contact-list__item:last-child{
+    margin-bottom: 64px;
+}
+
+.mob-contact-list__phone{
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 1.17;
+letter-spacing: 0.02em;
+
+color: $primary-color;
+
+@media screen and (max-width: 352px) {
+font-size: 30px;
+}
+}
+.mob-contact-list__mail {
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 1.16;
+letter-spacing: 0.02em;
+color: $description-color;
+
+}
+
+.social-list{
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 403px) {
+            flex-wrap: wrap;
+        }
+}
+
+.social-list__link{
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 1.22;
+letter-spacing: 0.02em;
+color: $primary-color;
+}
+.line{
+margin-left: 10px;
+margin-right: 10px;
+height: 22px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.is-hidden{
+    visibility: hidden;
+}

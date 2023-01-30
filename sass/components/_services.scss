@@ -1,0 +1,38 @@
+.services-wrap {
+    @extend .container;
+    padding-bottom: 94px;
+
+    @media screen and (max-width: 1200px){
+        display: none;
+    }
+}
+
+.title-services {
+    @extend %titles;
+    margin-bottom: 50px;
+}
+
+.serv-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.img-services{
+    position: relative;
+}
+
+.img-services__text{
+     position: absolute;
+    bottom: -1px;
+
+    padding-top: 27px;
+    width: 370px;
+    height: 70px;
+    text-align: center;
+    @extend .paragraph-basic;
+    line-height: 1.17;
+   
+    background-color: $bg-serv;
+
+}

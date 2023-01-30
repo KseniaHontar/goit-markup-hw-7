@@ -1,0 +1,110 @@
+.header {
+    background-color: $white-color;
+    border-bottom: 1px solid #ececec;
+}
+
+.nav-box{
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px){
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.nav-list{
+    display: flex;
+    gap: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.nav-list__link {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $color-text;
+    transition: $transition-color;
+    
+    &:hover,
+    &:focus{
+        color: $primary-color;
+    }
+}
+
+.nav-list__item{
+    position: relative;
+}
+
+.contact-list {
+ display: flex;
+margin-left: auto;
+
+@media screen and (max-width: 767px) {
+ display: none;
+}
+
+@media screen and (min-width: 1200px){
+   &__item:not(:last-child){
+    margin-right: 30px;
+} 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    flex-direction: column;
+}
+}
+
+.contact-list__item:not(:last-child){
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+    margin-bottom: 10px;    
+    }
+}
+
+.contact-list__icon{
+    fill: $description-color;
+    @include transition(fill);
+}
+
+.contact-list__link{
+    display: flex;
+    align-items: center; 
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $description-color;
+    text-decoration: none;
+    @include transition(color);
+    &:hover,
+    &:focus{
+        color: $primary-color;
+    }
+
+    &:hover .contact-list__icon,
+    &:focus .contact-list__icon{
+        fill: $primary-color;
+    }
+}
+
+.line-decor::after {
+  bottom: -33px;
+
+  position: absolute;
+  left: 0;
+  content: "";
+
+  width: 100%;
+  height: 4px;
+  background-color: $primary-color;
+  border-radius: 2px;
+}

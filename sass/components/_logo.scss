@@ -1,0 +1,23 @@
+.logo-header{
+    @extend %logo;
+    color: $color-text;
+    margin-right: 93px;
+}
+.logo__text{
+font-family: $logo-font;
+  font-weight: $font-weight-bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $primary-color;
+
+  @media screen and (max-width: 1200px){
+    font-size: 24px;
+  }
+}
+.logo-footer{
+  display: inline-block;
+  margin-bottom: 20px;
+    @extend %logo;
+    color: $white-color;
+}

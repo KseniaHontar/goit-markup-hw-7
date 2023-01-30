@@ -1,0 +1,145 @@
+.footer{
+    background-color: $second-color;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.footer-box{
+    text-align: center;
+    &__address{
+      @media screen and (max-width: 1199px){
+      margin-bottom: 60px;
+      }
+    }
+
+    @media screen and (min-width: 1200px){
+      display: flex;
+      text-align: start;
+    }
+}
+
+.address-list__link{
+  margin-bottom: 8px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $footer-link;
+  text-decoration: none;
+@include transition(color);
+
+  &:hover,
+  &:focus{
+    color: $primary-color;
+  }
+
+  &--white{
+    color: $white-color;
+  }
+}
+
+.join-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.join-contacts__title{
+@extend .paragraph-basic;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.join-contacts{
+  margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+       @media screen and (min-width: 1200px){
+      margin-left: 70px;
+      margin-right: 93px;
+      margin-bottom: 0;
+    }
+}
+
+.join-list__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $footer-icon-bg;
+    @include transition(background-color);
+
+    &:hover,
+   &:focus{
+    background-color: $primary-color;
+   }
+}
+
+.join-list__icon{
+   fill: $white-color;
+}
+
+.footer-input-title{
+  margin-bottom: 20px;
+    @extend .paragraph-basic;
+}
+
+.footer-input-wrap {
+  align-items: center;
+  
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
+}
+
+.btn-distrib{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+
+  @include buttons();
+}
+
+.icon-send{
+    margin-left: 10px;
+    fill: $white-color;
+}
+
+.input-distrib{
+  margin-right: 12px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  // width: 358px;
+  width: 100%;
+  
+  border: 1px solid $input-border-color;
+  border-radius: $main-border-radius;
+  outline: none;
+  background-color: $second-color;
+  @media screen and (min-width: 1200px){
+    width: 358px;
+  }
+}
+
+.footer-tablet-box{
+  @media screen and (min-width: 768px) and (max-width: 1200px){
+    display: flex;
+    justify-content: space-around;
+  }
+     @media screen and (min-width: 1200px) {
+       display: flex;
+     }
+}
